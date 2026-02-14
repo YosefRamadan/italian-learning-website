@@ -1,0 +1,60 @@
+.verbs-container {
+  padding: 60px 40px;
+}
+
+.verbs-container h1 {
+  margin-bottom: 30px;
+}
+
+.controls {
+  margin-bottom: 30px;
+}
+
+.controls input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 250px;
+  font-size: 14px;
+}
+
+.verbs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.verb-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.verb-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+.verb-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.tense {
+  margin-top: 10px;
+}
+
+.tense h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #3b82f6;
+}
+
+.conjugation {
+  font-size: 13px;
+  line-height: 1.8;
+  opacity: 0.85;
+}

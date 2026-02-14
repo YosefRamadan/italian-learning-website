@@ -1,0 +1,264 @@
+/* =========================
+   Fonts & Reset
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: radial-gradient(circle at top, #0f172a, #020617);
+  --bg-card: linear-gradient(180deg, rgba(15,23,42,0.9), rgba(2,6,23,0.9));
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+  --accent: #5f8cff;
+  --accent-soft: #7aa2ff;
+}
+
+/* Light Mode */
+:root {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --accent: #5f8cff;
+  --accent-soft: #7aa2ff;
+}
+
+/* Dark Mode */
+body.dark {
+  --bg-main: radial-gradient(circle at top, #0f172a, #020617);
+  --bg-card: linear-gradient(180deg, rgba(15,23,42,0.9), rgba(2,6,23,0.9));
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+}
+
+/* =========================
+   Body
+========================= */
+
+body {
+  font-family: "Cairo", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  direction: rtl;
+  min-height: 100vh;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* =========================
+   Header / Navbar
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(2, 6, 23, 0.85);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.header-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 14px 20px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.navbar a {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--text-main);
+}
+
+.navbar a.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(95,140,255,0.4);
+}
+
+/* =========================
+   Theme Toggle Button
+========================= */
+
+.theme-toggle {
+  width: 46px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.theme-toggle span {
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  transition: transform 0.35s ease;
+}
+
+body.dark .theme-toggle span {
+  transform: translateX(-20px);
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* =========================
+   Cards Section
+========================= */
+
+.cards {
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 28px 22px;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* =========================
+   CTA Section
+========================= */
+
+.cta {
+  max-width: 1300px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #ff3d3d, #ff7a5c);
+  border-radius: 24px;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.cta-box h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cta-box p {
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+}

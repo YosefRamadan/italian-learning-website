@@ -1,0 +1,65 @@
+.vocab-container {
+  padding: 60px 40px;
+}
+
+.vocab-container h1 {
+  margin-bottom: 30px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.controls input,
+.controls select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.vocab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.vocab-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.vocab-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+.vocab-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.level-badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.A1 { background: #22c55e; }
+.A2 { background: #3b82f6; }
+.B1 { background: #f59e0b; }
+.B2 { background: #ef4444; }
+
+.example {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 8px;
+}
